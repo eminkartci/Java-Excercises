@@ -61,13 +61,13 @@ public class findNthMinimum {
                 order++;
             }
 
-            
+            // get the number
             for (int i = 0 ; i < orders.length ; i ++){
                 if (orders[i] == findMinIndex){
                     NthMinNumber = numbers[i]; // first number is ignored
                 }
             }
-            // get the number
+            
             
             System.out.println(findMinIndex + "th minimum number is " + NthMinNumber);
     }   
