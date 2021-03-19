@@ -14,20 +14,29 @@ public class findAvg{
 
     public static void main(String[] args){
 
+        // initialize a sum variable
         double sum = 0;
 
+        // iterate all numbers
         for(int i = 0 ; i < args.length ; i++) {
-
+            // Parse it to double
+            // sum them
             sum += Double.parseDouble(args[i]);
-
         }
 
+        // Calculate the average
         double average = sum / args.length;
 
+        // Print Screen
+
+            // First Part
         System.out.print("The average of ");
+
+            // All inputs
         for (String x : args){
             System.out.print(x+ " ");
         }
+            // Last Part
         System.out.println(" is " + average + ".");
 
     }
