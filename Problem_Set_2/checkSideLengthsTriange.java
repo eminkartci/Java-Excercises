@@ -4,10 +4,11 @@ public class checkSideLengthsTriange {
 
     public static void main(String[] args){
 
+        double[] numbers = convertDouble(args);
+        print_double_array(numbers);
     }
 
     public static double[] convertDouble(String[] input){
-
 
         double currentNumber = 0;
         double[] output = new double[input.length];
@@ -24,6 +25,16 @@ public class checkSideLengthsTriange {
         }
 
         return output;
+
+    }
+
+    public static void print_double_array(double[] arr){
+
+        System.out.println("\n---- Double Array ----\n");
+        for(double x : arr){
+            System.out.print(x+" ");
+        }
+        System.out.println();
 
     }
     
