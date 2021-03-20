@@ -22,11 +22,13 @@ public class ChangeDimension {
                                            {40,50,60}};
     public static void main(String[] args) {
 
-        print_2D_arrat(originalArray);
+        print_2D_array(originalArray);
+
+        print_2D_array(transpose_2D_arrat(originalArray));
 
     }
 
-    public static void print_2D_arrat(int[][] array2D){
+    public static void print_2D_array(int[][] array2D){
 
         System.out.println("\n---> 2D Array <---\n");
         for(int[] line : array2D){
@@ -35,6 +37,21 @@ public class ChangeDimension {
             }
             System.out.println();
         }
+    }
+
+    public static int[][] transpose_2D_arrat(int[][] array2D){
+
+        int numOfRow = array2D.length;
+        int numOfCol = array2D[0].length;
+        int[][] transposed = new int[numOfCol][numOfRow];
+
+        for(int i = 0 ; i < numOfRow ; i++){
+            for (int j = 0 ; j < numOfCol ; j++){
+                transposed[j][i] = array2D[i][j];
+            }
+        }
+
+        return transposed;
     }
     
 }
