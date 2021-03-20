@@ -22,8 +22,10 @@ public class checkSideLengthsTriange {
 
         if (check_inputs(args)){
             double[] numbers = convertDouble(args);
-            print_double_array(numbers);
-            check_triangle_conditions(numbers);
+            if (numbers!= null) {
+                print_double_array(numbers);
+                check_triangle_conditions(numbers);
+            }
         }
     }
 
@@ -55,11 +57,10 @@ public class checkSideLengthsTriange {
 
 
     }
-
-    // Lengths cannot be negative
+   
     public static boolean check_inputs(String[] input){
         if(input.length != 3){
-            System.out.println("Your input is not valid !! ");
+            System.out.println("Your input is not valid because of the number of inputs!! ");
             return false;
         }
 
@@ -75,6 +76,10 @@ public class checkSideLengthsTriange {
 
             try{
                 currentNumber = Double.parseDouble(input[i]);
+                if (currentNumber < 0){
+                    System.out.println("Your input is not valid because of a negative number !! ");
+                    return null;
+                }
                 output[i] = currentNumber;
             }catch(Exception e){
                 System.out.println("There is a problem in inputs!!");
