@@ -20,15 +20,50 @@ public class checkSideLengthsTriange {
 
     public static void main(String[] args){
 
-        check_inputs(args);
-        double[] numbers = convertDouble(args);
-        print_double_array(numbers);
+        if (check_inputs(args)){
+            double[] numbers = convertDouble(args);
+            print_double_array(numbers);
+            check_triangle_conditions(numbers);
+        }
     }
 
-    public static void check_inputs(String[] input){
+    public static void check_triangle_conditions(double[] sides){
+
+
+        for(int i = 0 ; i < sides.length ; i++){
+            double sum = 0;
+            double dif = 0;
+            if( i == 0 ){
+                sum = sides[1] + sides[2];
+                dif = Math.abs(sides[1] - sides[2]);
+            }else if( i == 1 ){
+                sum = sides[0] + sides[2];
+                dif = Math.abs(sides[0] - sides[2]);
+            }else if( i == 2 ){
+                sum = sides[1] + sides[0];
+                dif = Math.abs(sides[1] - sides[0]);
+            }
+
+            if (sides[i] < dif || sides[i] > sum){
+                System.out.println("These sides connot be a triangle!!");
+                return;
+            }
+
+        }
+
+        System.out.println("These sides can form a triangle!");
+
+
+    }
+
+    // Lengths cannot be negative
+    public static boolean check_inputs(String[] input){
         if(input.length != 3){
             System.out.println("Your input is not valid !! ");
+            return false;
         }
+
+        return true;
     }
 
     public static double[] convertDouble(String[] input){
