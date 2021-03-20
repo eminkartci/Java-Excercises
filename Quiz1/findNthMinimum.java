@@ -5,6 +5,7 @@ public class findNthMinimum {
     // Find the nth minimum number of given array.
 
     public static void main(String[] args) {
+
         // get the index input
         int findMinIndex = Integer.parseInt(args[0]); 
 
@@ -23,6 +24,7 @@ public class findNthMinimum {
             int[] orders    = new int[args.length-1];
             
             int NthMinNumber = 0;
+
              // iterate all numbers
              for(int i = 0 ; i < args.length -1; i++) {
                 // Parse it to double
@@ -54,7 +56,7 @@ public class findNthMinimum {
                         }
                     }
                 }
-    
+
                 // After finding the min value and its position assign it
                 orders[nextMinIndex] = order;
                 // Increase the order
