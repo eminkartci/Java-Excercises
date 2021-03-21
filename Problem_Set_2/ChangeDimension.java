@@ -1,5 +1,7 @@
 package Problem_Set_2;
 
+import java.util.Scanner;
+
 /*
 
 Write a Java program to print an array after changing the rows and
@@ -18,16 +20,21 @@ After changing the rows and columns of the said array:
 
 public class ChangeDimension {
 
+    public static Scanner scanInt = new Scanner(System.in);
+
     // Define original 2D array
     public static int[][] originalArray = {{10,20,30},
                                            {40,50,60}};
 
     public static void main(String[] args) {
+
+        int[][] inputArray = get_2D_array_from_user();
+
         // print to the screen
-        print_2D_array(originalArray);
+        print_2D_array(inputArray);
         // take a transpose
             // then print new array
-        print_2D_array(transpose_2D_arrat(originalArray));
+        print_2D_array(transpose_2D_arrat(inputArray));
 
     }
 
@@ -65,6 +72,29 @@ public class ChangeDimension {
         }
         // return the result
         return transposed;
+    }
+
+    public static int[][] get_2D_array_from_user(){
+        // Ask for size
+        System.out.println("\nWhat is the size of your matrix ?\n");
+        // Initialize
+        int rowCount = 0, colCount = 0;
+
+        // Get row and col count
+        System.out.println("Row Count: "); rowCount = scanInt.nextInt();
+        System.out.println("Column Count: "); colCount = scanInt.nextInt();
+
+        // Initialize the matrix
+        int[][] matrix = new int[colCount][rowCount];
+
+        // Iterate all numbers
+        for (int i = 0 ; i < colCount ; i++){
+            for (int j = 0 ; j < rowCount; j++){
+                System.out.println("Element "+i+"x"+j+": ");;matrix[i][j] = scanInt.nextInt();
+            }
+        }
+        // return matrix
+        return matrix;
     }
     
 }
