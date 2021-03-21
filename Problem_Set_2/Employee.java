@@ -21,6 +21,11 @@ public class Employee{
         Employee e3 = new Employee("Sinem Ozturk",2018,12000,"Cekmekoy-Istanbul");
         Employee e4 = new Employee("Deniz Temel",2022,1000,"Atasehir-Istanbul");
 
+        // Play with functions
+        e4.setSalary(55);
+        e3.setSalary(-55);
+        e1.setSalary(3400);
+
         // Add them into an array
         Employee[] employees = {e1,e2,e3,e4};
 
@@ -79,4 +84,18 @@ public class Employee{
 
     }
 
+    // GETTER - SETTERS
+
+    public void setSalary(double newSalary){
+        
+        if (newSalary < this.MIN_SALARY){
+
+            System.out.println("You are not allowed this procedure!");
+            System.out.println("Min Salary: "+this.MIN_SALARY);
+            return;
+        }
+
+        this.salary = newSalary;
+        System.out.println(this.name+ "'s new salary is "+ this.salary);
+    }
 }
