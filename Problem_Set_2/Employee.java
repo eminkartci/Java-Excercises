@@ -18,15 +18,23 @@ public class Employee{
     private double salary;
     private String address;
 
+    private static final double MIN_SALARY = 2600;
+
     // MAIN Constructor
     public Employee(String name,int yearOfJoining,double salary,String address){
-
         this.name           = name;
         this.yearOfJoining  = yearOfJoining;
         this.salary         = salary;
         this.address        = address;
-
     }
+
+    // Secondary Constructor
+        // If we don't decleare the salary it will be automatically minimum
+    public Employee(String name,int yearOfJoining,String address){
+        this(name,yearOfJoining,MIN_SALARY,address);
+    }
+
+
 
 
 
