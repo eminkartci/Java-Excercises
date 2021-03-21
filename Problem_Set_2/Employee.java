@@ -22,9 +22,8 @@ public class Employee{
 
         Employee[] employees = {e1,e2,e3,e4};
 
-        for( Employee employee : employees){
-            employee.print_employee();
-        }
+        print_employees(employees);
+        
     }
 
     private String name;
@@ -50,13 +49,25 @@ public class Employee{
 
     public void print_employee(){
 
-        String employee_content = this.name + "\t"+ this.yearOfJoining +"\t" + this.address;
+        String employee_content = this.name + "\t"+ this.yearOfJoining +"\t\t  " + this.address;
 
         if (this.name.length() <16){
-            employee_content = this.name + "\t\t"+ this.yearOfJoining +"\t" + this.address;
+            employee_content = this.name + "\t\t"+ this.yearOfJoining +"\t\t  " + this.address;
         }
 
         System.out.println(employee_content);
+    }
+
+    public static void print_employees(Employee[] employees){
+
+        System.out.println("\n ====> COMPANY EMPLOYEES <====\n\n");
+        System.out.println("NAME\t\t\tYEAR OF JOINING\t  ADDRESS");
+        System.out.println("----------------------|------------------|--------------------------|");
+        for( Employee employee : employees){
+            employee.print_employee();
+        }
+        System.out.println("----------------------|------------------|--------------------------|");
+
     }
 
 }
