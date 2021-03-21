@@ -98,4 +98,6 @@ public class Employee{
         this.salary = newSalary;
         System.out.println(this.name+ "'s new salary is "+ this.salary);
     }
+
+    // MY CODES HERE
 }
