@@ -15,23 +15,28 @@ public class Employee{
 
     public static void main(String[] args){
 
+        // Create 3 employees
         Employee e1 = new Employee("Emin Kartci",2008,10000,"Kagithane/Istanbul");
         Employee e2 = new Employee("Kagan Ozturkoglu",2020,2000,"Bursa-Istanbul");
         Employee e3 = new Employee("Sinem Ozturk",2018,12000,"Cekmekoy-Istanbul");
         Employee e4 = new Employee("Deniz Temel",2022,1000,"Atasehir-Istanbul");
 
+        // Add them into an array
         Employee[] employees = {e1,e2,e3,e4};
 
+        // Print all employees
         print_employees(employees);
         
     }
 
-    private String name;
-    private int yearOfJoining;
-    private double salary;
-    private String address;
+    // Attributes
+        private String name;
+        private int yearOfJoining;
+        private double salary;
+        private String address;
 
-    private static final double MIN_SALARY = 2600;
+        // CONSTANT 
+        private static final double MIN_SALARY = 2600;
 
     // MAIN Constructor
     public Employee(String name,int yearOfJoining,double salary,String address){
@@ -48,24 +53,28 @@ public class Employee{
     }
 
     public void print_employee(){
-
+        // Initialize String
         String employee_content = this.name + "\t"+ this.yearOfJoining +"\t\t  " + this.address;
 
-        if (this.name.length() <16){
+        // If name is short add additonal tab
+        if (this.name.length() <16){    
+                                          // HERE
             employee_content = this.name + "\t\t"+ this.yearOfJoining +"\t\t  " + this.address;
         }
-
+        // print it
         System.out.println(employee_content);
     }
 
     public static void print_employees(Employee[] employees){
-
+        // Title
         System.out.println("\n ====> COMPANY EMPLOYEES <====\n\n");
         System.out.println("NAME\t\t\tYEAR OF JOINING\t  ADDRESS");
         System.out.println("----------------------|------------------|--------------------------|");
+        // Each employee
         for( Employee employee : employees){
             employee.print_employee();
         }
+        // Bottom
         System.out.println("----------------------|------------------|--------------------------|");
 
     }
