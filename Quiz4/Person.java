@@ -22,11 +22,16 @@ public class Person {
     }
 
     public void setHeight(int height){
-        this.height = height;
+        if (height > 0 ){
+            this.height = height;
+        }
+        
     }
 
     public void setWeight(int weight){
-        this.weight = weight;
+        if (weight > 0){
+            this.weight = weight;
+        }
     }
     
 }
