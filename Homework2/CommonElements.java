@@ -11,13 +11,21 @@ public class CommonElements {
 
     public static void main(String[] args){
 
+        // Initialize 2 string arrays
+        String[] nameList1 = {"Emin","Melisa","Ada","Sinem"};
+        String[] nameList2 = {"Deniz","Kagan","Metin","Cansu","Emin","Ada"};
 
+        // Create a Common Elements object
+        CommonElements ce = new CommonElements();
 
+        // Call the method
+        ce.find_common_btw_two_string_arrays(nameList1,nameList2);
+        
     }
 
     // 2 inputs
         // String arrays
-    public static void find_common_btw_two_string_arrays(String[] arr1,String[] arr2){
+    public void find_common_btw_two_string_arrays(String[] arr1,String[] arr2){
 
         // Iterate all items in arr1
         for(String item1 : arr1){
