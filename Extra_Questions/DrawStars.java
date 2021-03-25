@@ -19,16 +19,15 @@ public class DrawStars {
 
 
     public static void main(String args[]){
-        draw_Q1();
+        draw_Q1(12);
     }
 
-    public static void draw_Q1(){
+    public static void draw_Q1(int rowCount){
 
         // Constants
-        int rowCount        = 4;
-        int firstSpace      = 3;
+        int firstSpace      = rowCount -1;
         int initialStar     = 2;
-        int secindSpace     = 7;
+        int secindSpace     = 2 * rowCount - 1;
 
         // iteare rows
         for(int row = 0 ; row < rowCount ; row++){
