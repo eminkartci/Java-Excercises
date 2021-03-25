@@ -11,6 +11,18 @@ write a method that returns true if the array repeats a number
 public class TwiceElement {
 
 
+    public static void main(String[] args){
+
+        // initialize numbers array
+        int[] dinazor = {5,7,9,2,6,8,5,5,8,7};
+        // call the method
+        if(return_twice_elements(dinazor)){
+            System.out.println("This array has a number that repeates twice !");
+        }else{
+            System.out.println("This array has not a number that repeates twice !");
+        }
+        
+    }
 
     // This method returns elements of they repeats exactly twice
         // Input -> Integer Array
@@ -21,11 +33,11 @@ public class TwiceElement {
         // iterate all numbers
         for (int i = 0 ; i < numbers.length ; i++){
             
+            // reset the count
+            count = 0;
+
             // check if they repeat
             for (int j = 0 ; j < numbers.length ; j++){
-
-                // reset the count
-                count = 0;
 
                 // check all numbers
                 if(numbers[i] == numbers[j]){
