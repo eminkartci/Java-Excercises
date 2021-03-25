@@ -22,14 +22,34 @@ public class DrawStars {
     public static Scanner scanInt = new Scanner(System.in);
 
     public static void main(String args[]){
+        
+        // call first question
         draw_Q1(get_row_count());
+        
     }
 
     public static int get_row_count(){
 
-        // inform the user 
-        System.out.println("Row Count : "); int rowCount = scanInt.nextInt();
-        return rowCount;
+        // Errors
+        try{
+            // inform the user 
+            System.out.println("Row Count : "); int rowCount = scanInt.nextInt();
+
+            // Restrictions
+            if (rowCount <= 0){
+                System.out.println("Number cannot be less than or equal to zero !");
+                return get_row_count();
+            }
+            return rowCount;
+       
+        // In case any problem
+        }catch(Exception e){
+            // Warn the user
+            System.out.println("Please type a valid number !!");
+            // Get a new value and return it
+            return get_row_count();
+        }
+        
     }
 
     public static void draw_Q1(int rowCount){
