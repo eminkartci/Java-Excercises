@@ -1,5 +1,7 @@
 package Extra_Questions;
 
+import java.util.Scanner;
+
 /*
 
 Q1 - Draw this:
@@ -17,9 +19,17 @@ star2   2 4 6 8
 */
 public class DrawStars {
 
+    public static Scanner scanInt = new Scanner(System.in);
 
     public static void main(String args[]){
-        draw_Q1(12);
+        draw_Q1(get_row_count());
+    }
+
+    public static int get_row_count(){
+
+        // inform the user 
+        System.out.println("Row Count : "); int rowCount = scanInt.nextInt();
+        return rowCount;
     }
 
     public static void draw_Q1(int rowCount){
