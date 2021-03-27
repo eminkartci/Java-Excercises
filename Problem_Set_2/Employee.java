@@ -41,7 +41,7 @@ public class Employee{
         private String address;
 
         // CONSTANT 
-        private static final double MIN_SALARY = 2600;
+        private final static double MIN_SALARY = 2600;
 
     // MAIN Constructor
     public Employee(String name,int yearOfJoining,double salary,String address){

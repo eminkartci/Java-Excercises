@@ -13,6 +13,12 @@ public class Palindrome {
     
     public static void main(String[] args){
         
+        // Call the function
+        if (isPalindorme(5)){
+            System.out.println("This number is palindormes!");
+        }else {
+            System.out.println("This number is not palindormes!");
+        }
     }
 
     // Palindorme Detector
