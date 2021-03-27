@@ -12,7 +12,7 @@ true if the number is a palindrome; otherwise, it returns false.
 public class Palindrome {
     
     public static void main(String[] args){
-
+        
     }
 
     // Palindorme Detector
@@ -27,7 +27,24 @@ public class Palindrome {
             return false;
         }
 
+        // String operations are easier
+            // Convert int to string
+        String numberStr = Integer.toString(number);
 
+        // iterate half of string
+        for (int i = 0 ; i < numberStr.length() / 2 ; i++){
+            // check starting from beginning and end
+            char beginning = numberStr.charAt(i);
+            char end = numberStr.charAt(numberStr.length() - (i+1));
+
+            // check if they are equal
+            if (beginning != end){
+                // if any of them is not equal return
+                return false;
+            }
+        }
+
+        // otherwise return
         return true;
     }
 }
