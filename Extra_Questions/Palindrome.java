@@ -11,4 +11,23 @@ true if the number is a palindrome; otherwise, it returns false.
 
 public class Palindrome {
     
+    public static void main(String[] args){
+
+    }
+
+    // Palindorme Detector
+        // input -> int (non-negative)
+    public static boolean isPalindorme(int number){
+
+        // check if the number is valid
+        if (number < 0 ){
+            // warn the user
+            System.out.println("The input is not valid! Number must be non-negative !!!");
+            // return
+            return false;
+        }
+
+
+        return true;
+    }
 }
