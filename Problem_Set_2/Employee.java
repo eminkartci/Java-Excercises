@@ -41,7 +41,7 @@ public class Employee{
         private String address;
 
         // CONSTANT 
-        private final static double MIN_SALARY = 2600;
+        private static final double MIN_SALARY = 2600;
 
     // MAIN Constructor
     public Employee(String name,int yearOfJoining,double salary,String address){
@@ -88,10 +88,10 @@ public class Employee{
 
     public void setSalary(double newSalary){
         
-        if (newSalary < this.MIN_SALARY){
+        if (newSalary < Employee.MIN_SALARY){
 
             System.out.println("You are not allowed this procedure!");
-            System.out.println("Min Salary: "+this.MIN_SALARY);
+            System.out.println("Min Salary: "+Employee.MIN_SALARY);
             return;
         }
 
