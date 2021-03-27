@@ -25,7 +25,7 @@ public class DrawStars {
         
         // call first question
         draw_Q1(get_row_count());
-        
+
     }
 
     public static int get_row_count(){
