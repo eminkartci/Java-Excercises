@@ -99,5 +99,4 @@ public class Employee{
         System.out.println(this.name+ "'s new salary is "+ this.salary);
     }
 
-    // MY CODES HERE
 }
