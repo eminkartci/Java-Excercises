@@ -6,6 +6,7 @@ public class DetectTriple {
 
     public static void main(String[] args){
 
+        // print to the screen
         System.out.println(detectTriple(numbers));
 
     }
@@ -16,7 +17,7 @@ public class DetectTriple {
         int count = 0;
 
         // iterate all numbers
-        for (int i = 0 ; i < arr.length-2 ; i ++){
+        for (int i = 0 ; i < arr.length-3 ; i ++){
 
             // get adjacent 3 numbers
             int n1 = arr[i];
