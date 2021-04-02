@@ -8,8 +8,14 @@ public class Rectangle {
         Rectangle r1 = new Rectangle(4,10);
         r1.drawRectangle();
 
+        System.out.println(r1.perimeter(2));
+        System.out.println(r1.perimeter(1));
+
         Rectangle r2 = new Rectangle(10,4);
         r2.drawRectangle();
+
+        System.out.println(r1.perimeter(2));
+        System.out.println(r1.perimeter(3));
     }
 
     // Attribute
@@ -37,7 +43,13 @@ public class Rectangle {
             System.out.println();
 
         }
-            
+        
+    }
 
+    // Take a constant -> Multily with the result
+    public double perimeter(double constant){
+        // Perimeter = 2 * (length + width)
+        // return = constant * perimeter
+        return constant * (double) (this.length + this.width) * 2.0;
     }
 }
