@@ -27,17 +27,29 @@ public class Rectangle {
     private int length;
 
     // Constructor
-    public Rectangle(int length,int width){
-        this.length = length;
-        this.width = width;
+        // get side 1 and side 2
+        // order doesn't matter width must be greater
+    public Rectangle(int side1,int side2){
+        // if side 1 is greated
+        if (side1 > side2 ){
+            // width -> side 1
+            this.length     = side2;
+            this.width      = side1;
+        // otherwise
+        }else{
+            // width -> side 2
+            this.length     = side1;
+            this.width      = side2;
+        }
+        
     }
 
     public void drawRectangle(){
 
         //iterate all rows
-        for (int i = 0 ; i < this.width; i++){
+        for (int i = 0 ; i < this.length; i++){
             // iterate all columns
-            for(int j = 0 ; j < this.length ; j++){
+            for(int j = 0 ; j < this.width ; j++){
 
                 System.out.print("*");
 
@@ -62,10 +74,10 @@ public class Rectangle {
     public static void getRectangleParameters(){
 
         Scanner scan = new Scanner(System.in);
-        System.out.println("width: "); int width = scan.nextInt();
-        System.out.println("length: "); int length = scan.nextInt();
+        System.out.println("Side 1: "); int side1 = scan.nextInt();
+        System.out.println("Side 2: "); int side2 = scan.nextInt();
 
-        Rectangle rec =new Rectangle(length, width);
+        Rectangle rec =new Rectangle(side2, side1);
         rec.rectangleInfo();
         
     }
