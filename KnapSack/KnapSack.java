@@ -13,10 +13,14 @@ public class KnapSack {
 
     public int findMaxValue(int itemIndex,int remainedCapacity){
 
+        // define initial values
+        // int[] weights   = {5 ,4 ,6 ,3};
+        // int[] values    = {10,40,30,50};
+
         // check if it is out of my constraints
             // index less than 0
             // remained capacity less than 0
-        if(itemIndex < 1 || remainedCapacity <= 0 ){
+        if(itemIndex < 0 || remainedCapacity <= 0 ){
             return 0;
         }// current item exceeds my capacity
         else if (this.weights[itemIndex] > remainedCapacity){

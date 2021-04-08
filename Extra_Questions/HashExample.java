@@ -17,9 +17,8 @@ public class HashExample {
         namesAges.put(21,"Kagan");
         namesAges.put(23,"Emin");
         namesAges.put(20,"Melisa");
-        namesAges.put(20,"Sinem");
-        namesAges.put(20,"Deniz");
         namesAges.put(19,"Zehra");
+        namesAges.put(39,"Murat");
 
         System.out.println(namesAges.get(20));
         System.out.println(namesAges.get(19));
