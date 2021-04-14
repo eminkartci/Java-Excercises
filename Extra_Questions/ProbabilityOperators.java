@@ -57,7 +57,7 @@ public class ProbabilityOperators {
         if(myRand.nextBoolean()){
 
             // Fail
-            if(myRand.nextInt(100) >= 95){
+            if(myRand.nextInt(100) >= 5){
                 opt1.add(0);
                 return false;
             // Success
