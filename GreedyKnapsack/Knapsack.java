@@ -10,9 +10,16 @@ public class Knapsack {
 		// Read an store data
 		ProblemData problemData = ReadData();
 
-		
+		// Create Solution object
 		Solution solution1 = new Solution(problemData);
+
+		// call method
 		solution1.useAlgorithm();
+
+		// Create random picker
+		RandomPicker Deniz = new RandomPicker(problemData);
+
+		Deniz.randomPick();
 	}
 
 
@@ -29,7 +36,7 @@ public class Knapsack {
 		try {
 
 			// Create buffered reader
-			BufferedReader bufferedReader=new BufferedReader(new FileReader("data.csv"));
+			BufferedReader bufferedReader=new BufferedReader(new FileReader("GreedyKnapsack/data.csv"));
 
 			// Get first line
 			String line=bufferedReader.readLine();

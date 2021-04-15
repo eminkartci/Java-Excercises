@@ -26,5 +26,8 @@ public class Item {
 	public int getWeight() {
 		return this.weight;
 	}
+	public String getID(){
+		return this.itemId;
+	}
 
 }
