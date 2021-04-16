@@ -4,6 +4,7 @@ import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Main {
@@ -53,6 +54,7 @@ public class Main {
 
         findSameSurname(data);
         findMostUsedFirstName(data);
+        mostExperiencedEmployee(data);
 
     }
 
@@ -107,6 +109,26 @@ public class Main {
 
         System.out.println("Most used name is " + countName.get(maxCount) + " and used " + maxCount + " times");
 
+    }
+
+    public static void mostExperiencedEmployee(HashMap<Integer, Employee> data){
+
+        ArrayList<Employee> employees = new ArrayList<Employee>(); 
+
+        for(int i : data.keySet()){
+            employees.add(data.get(i));
+        }
+
+        int mostExperience = -1000;
+        Employee experienced = null;
+        for( Employee e : employees){
+            if(e.spendYears > mostExperience){
+                experienced = e;
+                mostExperience = e.spendYears;
+            }
+        }
+
+        System.out.println("Most experienced employee is " + experienced.name + " with " +  experienced.spendYears + " years!!");
     }
     
 }
