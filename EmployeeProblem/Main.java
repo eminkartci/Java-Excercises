@@ -52,6 +52,7 @@ public class Main {
         }
 
         findSameSurname(data);
+        findMostUsedFirstName(data);
 
     }
 
@@ -72,6 +73,39 @@ public class Main {
             }    
 
         }
+
+    }
+
+    public static void findMostUsedFirstName(HashMap<Integer, Employee> data){
+
+        HashMap<String, Integer> nameCount = new HashMap<String, Integer>();
+
+        for( int ID : data.keySet()){
+
+            String name = data.get(ID).name;
+
+            if (nameCount.get(name) == null){
+                nameCount.put(name,1);
+            }else{
+                int exCount = nameCount.get(name);
+                nameCount.put(name,exCount+1);
+            }
+
+        }
+
+        HashMap<Integer,String> countName = new HashMap<Integer,String>();
+        for(String name : nameCount.keySet()){
+            countName.put(nameCount.get(name),name);
+        }
+
+        int maxCount = 0;
+        for(int count : nameCount.values()){
+            if(count > maxCount){
+                maxCount = count;
+            }
+        }
+
+        System.out.println("Most used name is " + countName.get(maxCount) + " and used " + maxCount + " times");
 
     }
     
