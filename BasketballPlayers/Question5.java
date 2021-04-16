@@ -34,7 +34,7 @@ public class Question5 {
     
 }
 
-class Player{ 
+private class Player{ 
     
     String name;
     int jerseyno;
