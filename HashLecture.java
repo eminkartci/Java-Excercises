@@ -1,19 +1,18 @@
-package HashExcercise;
-
 import java.util.HashMap;
 
 public class HashLecture {
 
     HashMap<String,Integer> isim_id = new HashMap<String,Integer>();
-    String[] isim = new String[10];
-    int[] id = new int[10];
+    String[] isim                   = new String[10];
+    int[] id                        = new int[10];
 
     public static void main(String[] args){
 
-        HashLecture hl = new HashLecture();
+        HashLecture hl              = new HashLecture();
         hl.holdInHashMap();
         hl.holdInArray();
         hl.showArray();
+
     }
 
     public void showArray(){
@@ -48,10 +47,11 @@ public class HashLecture {
         isim_id.put("Nihan",2);
         isim_id.put("Cansu",3);
         isim_id.put("Yavuz",4);
-        isim_id.put("Yusuf",0);
+        isim_id.put("Yusuf",10);
 
-        System.out.println("Cansu".hashCode());
         System.out.println(isim_id);
+
+        System.out.println("Yusufun id: " + isim_id.get("Yusuf"));
 
     }
 
