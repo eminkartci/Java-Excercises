@@ -1,3 +1,4 @@
+package SummerCourse;
 import java.util.HashMap;
 
 public class HashLecture {
