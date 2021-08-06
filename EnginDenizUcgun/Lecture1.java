@@ -7,23 +7,33 @@ public class Lecture1 {
 
 
     public static void main(String[] args) {
-        int[] randomNumbers = {3,425,24,5523,234,66,9,21};
+
+        // String Array: args => null
+        // Integer Array: randomNumbers => [3,425,24,5523,234,66,9,21]
+
+        int[] randomNumbers = {3,425,24,5523,234,66,9,21,42,11,1,0,34};
         calculateAverage(randomNumbers);
     }
 
     // 1 - define a method takes an integer array and calculates the average
     public static void calculateAverage(int[] numbers){
 
-        // numbers = [1,47,34,33,5467];
-        int sum = 0;
+        // Integer Array: numbers => [3,425,24,5523,234,66,9,21];
+        // int: sum => 452;
+        // double: average => 2345.234
+
+        int sum = 0; // Initialize 
 
         // Sum up all numbers
         for(int i = 0 ; i < numbers.length ; i++){
+
+            // int: i = 2;
+
             sum += numbers[i];
         }
 
         // divide array's length
-        double average = sum / (double) numbers.length;
+        double average = (double) sum / numbers.length;
         System.out.println("The Average: "+average);
     }
     
