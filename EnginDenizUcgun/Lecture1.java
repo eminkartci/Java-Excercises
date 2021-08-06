@@ -5,6 +5,12 @@ package EnginDenizUcgun;
 
 public class Lecture1 {
 
+
+    public static void main(String[] args) {
+        int[] randomNumbers = {3,425,24,5523,234,66,9,21};
+        calculateAverage(randomNumbers);
+    }
+
     // 1 - define a method takes an integer array and calculates the average
     public static void calculateAverage(int[] numbers){
 
@@ -17,7 +23,7 @@ public class Lecture1 {
         }
 
         // divide array's length
-        double average = (double) sum / (double) numbers.length;
+        double average = sum / (double) numbers.length;
         System.out.println("The Average: "+average);
     }
     
