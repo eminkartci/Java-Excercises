@@ -8,7 +8,7 @@ public class Lecture2_Variables {
         Student student2 = new Student(22,"Emin"); 
         student2.friends[0] = student1;
         //introduce(student1);
-        printTriangle(9);
+        baklava(9);
 
     }
 
@@ -62,6 +62,39 @@ public class Lecture2_Variables {
             System.out.println();
         }
         
+
+    }
+
+    public static void baklava(int h){
+
+        /*
+
+           *
+          ***
+         *****
+         -***
+         --*
+         
+         h = 2 -> 1
+         h = 3 -> 3
+         h = 4 -> 5
+
+         2n -3 
+
+       */
+        printTriangle(h);
+
+        for(int i = 0 ; i < h -1 ; i++){
+
+            for(int j = 0 ; j < i + 1 ; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0; j< (2*h-3) - 2*i; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+
+        }
 
     }
 
