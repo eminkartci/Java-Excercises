@@ -8,7 +8,7 @@ public class Lecture2_Variables {
         Student student2 = new Student(22,"Emin"); 
         student2.friends[0] = student1;
         //introduce(student1);
-        printRect(52,2);
+        printTriangle(9);
 
     }
 
@@ -23,7 +23,40 @@ public class Lecture2_Variables {
     public static void printRect(int h, int w){
 
         for(int k = 0 ; k < h ; k++){
-            for(int i =0 ; i < w ; i++){
+            for(int j =0 ; j < w ; j++){
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        
+
+    }
+
+    public static void printTriangle(int h){
+
+       /*
+
+        h = 0 - 2 space - 1 star - 1 space - 3 star 
+        h = 1 - 1 space - 3 star - 2 space - 1 star
+        h = 2 - 0 spcae - 5 star
+
+
+          *
+         ***
+        *****
+
+           *
+          ***
+         *****
+        *******
+       */
+
+        for(int i = 0 ; i < h ; i++){
+
+            for(int j = 0 ; j < (h-1) - i ; j++){
+                System.out.print(" ");
+            }
+            for(int j = 0 ; j < 2*i + 1 ; j++){
                 System.out.print("*");
             }
             System.out.println();
