@@ -3,7 +3,7 @@
 
 package EnginDenizUcgun;
 
-public class Lecture1 {
+public class Lecture1_Methods {
 
 
     public static void main(String[] args) {
