@@ -17,6 +17,8 @@ public class Sales {
         Customer c3 = new Customer(3,"Cem");
 
         inform(c3, o1);
+        inform(c2, o3);
+        inform(c1, o2);
 
     }
 
