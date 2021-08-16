@@ -45,10 +45,10 @@ public class Sales {
 
     public static void inform(int cid,int pid, HashMap<Integer,String> c2n){
 
-        String content = "";
+        String content = c2n.get(cid) + ", ";
 
         System.out.println(content);
-        
+
     }
     
 
