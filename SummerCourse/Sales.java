@@ -1,55 +1,73 @@
 package SummerCourse;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class Sales {
 
     public static void main(String[] args) {
 
-        int id = 1;
-        String productName = "Donut";
-        String targetLocation = "İstanbul";
-        String date = "16/08/2021";
-        double price = 12.4;
-        double cost = 3;
+        Order o1 = new Order(1,"Donut","İstanbul","16/08/2021",12.4,3);
+        Order o2 = new Order(2,"Waffle","İstanbul","16/08/2021",32.4,14);
+        Order o3 = new Order(3,"Cheesecake","Antalya","12/08/2021",15.4,4);
 
-        int id2 = 2;
-        String productName2 = "Waffle";
-        String targetLocation2 = "İstanbul";
-        String date2 = "16/08/2021";
-        double price2 = 32.4;
-        double cost2 = 14;
 
-        int customerID = 1;
-        String customerName = "Emin";
-        HashMap<Integer, String> customer2name = new HashMap<Integer, String>();
-        HashMap<Integer, Integer> customer2product = new HashMap<Integer, Integer>();
+        Customer c1 = new Customer(1,"Emin");
+        Customer c2 = new Customer(2,"Ada");
+        Customer c3 = new Customer(3,"Cem");
 
-        int customerID2 = 2;
-        String customerName2 = "Ada";
-
-        int customerID3 = 3;
-        String customerName3 = "Cem";
-
-        customer2name.put(customerID,customerName);
-        customer2name.put(customerID2,customerName2);
-        customer2name.put(customerID3,customerName3);
-
-        customer2product.put(customerID, id);
-        customer2product.put(customerID2, id);
-        customer2product.put(customerID3, id2);
-
-        System.out.println("Alınan Ürünler: "+customer2product);
+        inform(c3, o1);
 
     }
 
-    public static void inform(int cid,int pid, HashMap<Integer,String> c2n){
+    public static void inform(Customer c, Order o) {
 
-        String content = c2n.get(cid) + ", ";
+        String content = c.name + ", " + o.productName + " ürününü " + o.price + " tl'ye satın almıştır";
 
         System.out.println(content);
 
     }
-    
 
 }
+
+class Order {
+
+    // Attribute
+    int id;
+    String productName;
+    String targetLocation;
+    String date;
+    double price;
+    double cost;
+
+    // Constructor
+    public Order(int id, String productName, String targetLocation, String date, double price, double cost) {
+        this.id             = id;
+        this.productName    = productName;
+        this.targetLocation = targetLocation;
+        this.date           = date;
+        this.price          = price;
+        this.cost           = cost;
+    }
+
+}
+
+class Customer{
+
+    // Attributes
+    int id;
+    String name;
+    ArrayList<Order> orders;
+
+    // Constructor
+    public Customer(int id,String name){
+
+        this.id = id;
+        this.name = name;
+        this.orders = new ArrayList<Order>();
+
+    }
+
+}
+
+
