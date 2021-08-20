@@ -4,7 +4,7 @@ public class Lecture3_MonteCarlo{
 
     public static void main(String[] args) {
 
-        
+        sarhosAdam(31);
         
     }
 
@@ -37,6 +37,22 @@ public class Lecture3_MonteCarlo{
         System.out.println(" H % : " + (Hcount / count) * 100);
         System.out.println(" T % : " + (Tcount/ count) * 100);
 
+
+    }
+
+    public static void sarhosAdam(int adimSayisi){
+
+        int baslangicPozisyonu = 0 ;
+
+        for (int i = 0 ; i < adimSayisi ; i ++){
+            if( Math.random() < 0.5 ){ // Sol
+                baslangicPozisyonu--;
+            }else{ // Sağ
+                baslangicPozisyonu++;
+            }
+        }
+
+        System.out.println("Adam baslangicatan " + baslangicPozisyonu + " kadar sapmistir.");
 
     }
 
