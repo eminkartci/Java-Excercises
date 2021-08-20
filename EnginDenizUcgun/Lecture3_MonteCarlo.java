@@ -43,6 +43,7 @@ public class Lecture3_MonteCarlo{
     public static void sarhosAdam(int adimSayisi){
 
         int baslangicPozisyonu = 0 ;
+        int[] pozisyonlar = new int[adimSayisi];
 
         for (int i = 0 ; i < adimSayisi ; i ++){
             if( Math.random() < 0.5 ){ // Sol
@@ -50,10 +51,14 @@ public class Lecture3_MonteCarlo{
             }else{ // Sağ
                 baslangicPozisyonu++;
             }
+            pozisyonlar[i] = baslangicPozisyonu;
         }
 
         System.out.println("Adam baslangicatan " + baslangicPozisyonu + " kadar sapmistir.");
-
+        for(int i = 0 ; i < pozisyonlar.length ; i++){
+            System.out.println("Yürüme Geçmişi: " + pozisyonlar[i]);
+        }
+        
     }
 
 }
