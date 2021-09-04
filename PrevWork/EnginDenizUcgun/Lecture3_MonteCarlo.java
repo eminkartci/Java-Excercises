@@ -1,4 +1,4 @@
-package EnginDenizUcgun;
+package PrevWork.EnginDenizUcgun;
 
 public class Lecture3_MonteCarlo{
 

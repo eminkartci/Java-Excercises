@@ -1,7 +1,7 @@
 
 // src -> packages -> .java uzantili file / class -> method -> statement
 
-package EnginDenizUcgun;
+package PrevWork.EnginDenizUcgun;
 
 public class Lecture1_Methods {
 
