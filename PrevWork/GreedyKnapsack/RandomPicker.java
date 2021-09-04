@@ -1,4 +1,4 @@
-package GreedyKnapsack;
+package PrevWork.GreedyKnapsack;
 
 import java.util.ArrayList;
 import java.util.Random;

@@ -1,4 +1,4 @@
-package GreedyKnapsack;
+package PrevWork.GreedyKnapsack;
 
 import java.io.BufferedReader;
 import java.io.FileReader;
