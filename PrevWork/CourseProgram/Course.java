@@ -1,4 +1,4 @@
-package CourseProgram;
+package PrevWork.CourseProgram;
 
 import java.util.ArrayList;
 
