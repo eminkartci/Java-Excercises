@@ -1,4 +1,4 @@
-package KnapSack;
+package PrevWork.KnapSack;
 
 import java.util.ArrayList;
 

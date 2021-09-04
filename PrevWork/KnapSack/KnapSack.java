@@ -1,4 +1,4 @@
-package KnapSack;
+package PrevWork.KnapSack;
 
 public class KnapSack {
 
