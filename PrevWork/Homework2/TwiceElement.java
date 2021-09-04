@@ -1,4 +1,4 @@
-package Homework2;
+package PrevWork.Homework2;
 
 /*
 
