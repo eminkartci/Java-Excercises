@@ -1,4 +1,4 @@
-package Tasks;
+package Tasks.JavaEasy;
 
 public class TaskTemplate {
 
