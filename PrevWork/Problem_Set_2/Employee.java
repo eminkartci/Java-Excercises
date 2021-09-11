@@ -1,5 +1,4 @@
-package Problem_Set_2;
-
+package PrevWork.Problem_Set_2;
 /*
 
 Write a program that would print the information (name, year of joining,
