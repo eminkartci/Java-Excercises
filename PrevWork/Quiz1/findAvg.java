@@ -1,4 +1,4 @@
-package Quiz1;
+package PrevWork.Quiz1;
 
 
 /*

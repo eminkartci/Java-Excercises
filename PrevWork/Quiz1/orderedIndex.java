@@ -1,4 +1,4 @@
-package Quiz1;
+package PrevWork.Quiz1;
 
 /*
  * Write a code that reports the ordered index of integers in a given sequence.
