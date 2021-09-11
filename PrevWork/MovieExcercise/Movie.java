@@ -1,4 +1,4 @@
-package MovieExcercise;
+package PrevWork.MovieExcercise;
 
 public class Movie {
 
