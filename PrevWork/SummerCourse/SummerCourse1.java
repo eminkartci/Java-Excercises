@@ -1,4 +1,4 @@
-package SummerCourse;
+package PrevWork.SummerCourse;
 
 public class SummerCourse1 {
 

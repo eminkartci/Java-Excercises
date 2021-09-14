@@ -1,4 +1,4 @@
-package SummerCourse;
+package PrevWork.SummerCourse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
