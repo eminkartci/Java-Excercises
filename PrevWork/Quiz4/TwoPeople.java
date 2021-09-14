@@ -1,4 +1,4 @@
-package Quiz4;
+package PrevWork.Quiz4;
 
 public class TwoPeople {
 
