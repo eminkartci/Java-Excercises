@@ -1,4 +1,4 @@
-package Quiz2;
+package PrevWork.Quiz2;
 
 import java.util.Scanner;
 
